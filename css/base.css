@@ -586,7 +586,7 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        padding-top: 0;
+        margin-top: 0;
     }
 
     .mmenu-page {
@@ -622,7 +622,7 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        padding-top: 0;
+        margin-top: 0;
     }
 
     .mmenu-page {
@@ -656,10 +656,6 @@ table.dataTable th:active {
         padding-top: 60px;
         overflow-x: auto !important;
         overflow-y: auto !important;
-    }
-
-    .mmenu-opened > ul {
-        padding-top: 55px;
     }
 
     .mmenu-page {
@@ -711,9 +707,8 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        margin-top: 35px;
-        margin-bottom: 70px;
-
+        margin-top: 45px;
+        margin-bottom: 90px;
     }
 
     .mmenu-page {
@@ -738,6 +733,11 @@ table.dataTable th:active {
     body {
         padding-left: 60px;
         padding-right: 60px;
+    }
+
+    .mmenu-opened > ul {
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     #sidebar {
