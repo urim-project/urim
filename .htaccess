@@ -1,0 +1,34 @@
+Options -Indexes
+Options +FollowSymLinks
+Options -MultiViews
+
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /urim/
+
+    RewriteRule ^([a-z0-9_-]+)\.html$ index.php/page/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^system.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^application.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond $1 !^(index\.php|images|static|robots\.txt)
+    RewriteRule ^(.*) /index.php/$1 [L]
+
+
+
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+  ErrorDocument 404 index.php
+</IfModule>
