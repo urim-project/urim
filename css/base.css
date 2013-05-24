@@ -711,11 +711,17 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        padding-top: 90px;
+        margin-top: 35px;
+        margin-bottom: 70px;
+
     }
 
     .mmenu-page {
         margin-top: 0;
+    }
+
+    html.mmenu-left.mmenu-opening .mmenu-page, html.mmenu-left.mmenu-opening #mmenu-blocker {
+        margin-left: -60px;
     }
 
     #sidebar {
