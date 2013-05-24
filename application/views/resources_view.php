@@ -304,6 +304,9 @@
               <h4>耶大雅聖經工具</h4>
               <p><a href="http://bibletool.konline.org">http://bibletool.konline.org</a></p>
 
+              <h4>探索耶穌真貌--認識那位被希臘化了的耶穌</h4>
+              <p><a href="https://shop.campus.org.tw/ProductDetails.aspx?productID=000466813">https://shop.campus.org.tw/ProductDetails.aspx?productID=000466813</a></p>
+
               <h4>猶差匯聚</h4>
               <p><a href="http://jematrix.wordpress.com">http://jematrix.wordpress.com</a></p>
 
@@ -321,6 +324,9 @@
 
               <h4>新漢語聖經</h4>
               <p><a href="http://www.chinesebible.org.hk/onlinebible">http://www.chinesebible.org.hk/onlinebible</a></p>
+
+              <h4>夏達華研道中心</h4>
+              <p><a href="http://www.hadavar.org.hk">http://www.hadavar.org.hk</a></p>
 
               <h4>Complete Jewish Bible</h4>
               <p><a href="http://www.biblegateway.com/passage/?search=Genesis%201&version=CJB">http://www.biblegateway.com/passage/?search=Genesis%201&version=CJB</a></p>
