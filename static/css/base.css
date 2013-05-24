@@ -50,7 +50,8 @@ html.mmenu-left.mmenu-opening #mmenu-blocker {
 }
 
 .mmenu-opened > ul {
-    padding-top: 45px;
+    margin-top: 35px;
+    margin-bottom: 15px;
 }
 
 .mmenu-page {
