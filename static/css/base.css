@@ -708,7 +708,7 @@ table.dataTable th:active {
 
     .mmenu-opened > ul {
         margin-top: 45px;
-        margin-bottom: 90px;
+        margin-bottom: 65px;
     }
 
     .mmenu-page {
@@ -737,7 +737,7 @@ table.dataTable th:active {
 
     .mmenu-opened > ul {
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     #sidebar {
@@ -776,7 +776,7 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        padding-top: 55px;
+        margin-top: 45px;
     }
 
     .mmenu-page {
@@ -806,7 +806,7 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        padding-top: 55px;
+        margin-top: 45px;
     }
 
     .mmenu-page {
