@@ -58,6 +58,7 @@
         <script src="<?= base_url('js/jquery.nanoscroller.0.6.9/jquery.nanoscroller.min.js'); ?>"></script>
 
         <script type="text/javascript" src="<?= base_url('js/noty/jquery.noty.js'); ?>"></script>
+        <script type="text/javascript" src="<?= base_url('js/noty/layouts/topLeft.js'); ?>"></script>
         <script type="text/javascript" src="<?= base_url('js/noty/layouts/bottom.js'); ?>"></script>
         <script type="text/javascript" src="<?= base_url('js/noty/layouts/bottomCenter.js'); ?>"></script>
         <!-- You can add more layouts if you want -->
@@ -83,6 +84,32 @@
         <link href="<?= base_url('css/base.css'); ?>" rel="stylesheet">
         <script src="<?= base_url('js/base.js'); ?>"></script>
         <? endif; ?>
+
+        <!-- 使用提示 -->
+        <script>
+        $(document).ready(function() {
+            var _noty = noty({
+                text: '點擊左上角會有所有書卷的選單喔！',
+                type: 'alert',
+                layout: 'topLeft',
+                buttons: [
+                    {addClass: 'btn btn-primary', text: '我知道了！', onClick: function($noty) {
+                        $noty.close();
+
+                      }
+                    },
+                    {addClass: 'btn btn-danger', text: '我不知道，幫我打開吧！', onClick: function($noty) {
+                        $noty.close();
+
+                        $('.brand').click();
+
+                      }
+                    }
+                ]
+            });
+        });
+
+        </script>
     </head>
 
 <body>
