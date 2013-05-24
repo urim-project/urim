@@ -134,13 +134,13 @@
                         </ul>
                     </div>
                     <div class="span4">
-                    <? if ($static == true) : ?>
-                    <form method="post" accept-charset="utf-8" action="../search" class="navbar-search pull-left"  id="strongsform" />
-                    <? else: ?>
-                    <form method="post" accept-charset="utf-8" action="<?= site_url('search') ?>"  class="navbar-search pull-left"  id="strongsform" />
-                    <? endif ?>
-                        <input name="strongs" type="text" class="input-block-level search-query" placeholder="Strong's number">
-                    </form>
+                        <? if ($static == true) : ?>
+                        <form method="post" accept-charset="utf-8" action="../search" class="navbar-search pull-left"  id="strongsform" />
+                        <? else: ?>
+                        <form method="post" accept-charset="utf-8" action="<?= site_url('search') ?>"  class="navbar-search pull-left"  id="strongsform" />
+                        <? endif ?>
+                            <input name="strongs" type="text" class="input-block-level search-query" placeholder="Strong's number">
+                        </form>
                     </div>
 
                 </div>
@@ -307,8 +307,8 @@
               <h4>猶差匯聚</h4>
               <p><a href="http://jematrix.wordpress.com">http://jematrix.wordpress.com</a></p>
 
-              <h4>探索耶穌真貌--認識那位被希臘化了的耶穌</h4>
-              <p><a href="https://shop.campus.org.tw/ProductDetails.aspx?productID=000466813">https://shop.campus.org.tw/ProductDetails.aspx?productID=000466813</a></p>
+              <h4>Torah Readings</h4>
+              <p><a href="http://www.hebcal.com/sedrot">http://www.hebcal.com/sedrot</a></p>
 
               <h4>Weekly Parashah</h4>
               <p><a href="http://www.torahresource.com/Parashot.html">http://www.torahresource.com/Parashot.html</a></p>
@@ -325,14 +325,15 @@
               <h4>Complete Jewish Bible</h4>
               <p><a href="http://www.biblestudytools.com/cjb/genesis/1-1.html">http://www.biblestudytools.com/cjb/genesis/1-1.html</a></p>
 
-              <h4>夏達華研道中心</h4>
-              <p><a href="http://www.hadavar.org.hk">http://www.hadavar.org.hk</a></p>
-
               <h4>妥拉的智慧</h4>
               <p><a href="http://rock24sea.blogspot.tw">http://rock24sea.blogspot.tw</a></p>
 
               <h4>基督教壹蘋果</h4>
               <p><a href="https://www.facebook.com/groups/133255080104738">https://www.facebook.com/groups/133255080104738</a></p>
+
+              <h4>Restoring the Jewishness of the Gospel</h4>
+              <p><a href="http://www.amazon.com/Restoring-Jewishness-Gospel-Christians-Condensed/dp/1880226669/">http://www.amazon.com/Restoring-Jewishness-Gospel-Christians-Condensed/dp/1880226669/</a></p>
+
             </div>
           </div>
 

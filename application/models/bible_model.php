@@ -712,8 +712,10 @@ class Bible_model extends CI_Model {
         $tbl_name = 'bible_original';
 
         if ($type === 'greek') {
+            $prefix = 'G';
             $where = "book >= 40 AND book <= 66";
         } else {
+            $prefix = 'H';
             $where = "book >= 1 AND book <= 39";
         }
 
@@ -724,7 +726,8 @@ class Bible_model extends CI_Model {
         $i = 1;
         $text_serial = array();
         foreach ($query->result() as $row) {
-            $text = array();
+            $w = array();
+
             $text['strongs'] = $row->strongs;
             $text['word'] = $row->word;
             $text['book'] = $row->book;
@@ -735,28 +738,27 @@ class Bible_model extends CI_Model {
             $serial = array($text['book'], $text['chapter'], $text['verse']);
             $text['text'] = $this->read_by_serial($serial, true, false);
 
-            $w = '<span class="' . $type . '">';
+            $title = '<a target="_blank" href="../reading/' . $text['book_abbr'] . '.' . $text['chapter'] . '.' . $text['verse'] . '.html?strongs=' . $prefix . $text['strongs'] . '">' . $text['book_name_chinese'] . ' ' . $text['chapter'] . ':' . $text['verse'] . '</a>';
+            $orginText = '';
             foreach ($text['text'] as $k) {
                 if ($k['strongs'] === $text['strongs']) {
-                    $w .= '<span class="highlight">' . $k['word'] . '</span>' . ' ';
+                    $orginText .= '<span class="highlight" data-ref="' . $prefix . $k['strongs'] . '">' . $k['word'] . '</span> ';
                 } else {
-                    $w .=  $k['word'] . ' ';
+                    $orginText .= '<span data-ref="' . $prefix . $k['strongs'] . '">' . $k['word'] . '</span> ';
                 }
             }
-            $w .= '</span>';
 
-            $newtext = array();
-            $newtext[0] = strval($i++);
-            $newtext[1] = $w;
-            $newtext[2] = '<a target="_blank" href="../reading/' . $text['book_abbr'] . '.' . $text['chapter'] . '.' . $text['verse'] . '.html">' . $text['book_name_chinese'] . ' ' . $text['chapter'] . ':' . $text['verse'] . '</a>';
+            $w[0] = strval($i++);
+            $w[1] = '<span class="' . $type . '">' . $orginText . '</span>';
+            $w[2] = $title;
 
-            $text_serial[] = $newtext;
-
+            $text_serial[] = $w;
         }
 
-        $result['aaData'] = $this->multi_unique($text_serial);
-        if (!empty($result)) {
-            return json_encode($result);
+        if (!empty($text_serial)) {
+            $data["aaData"] = $this->multi_unique($text_serial);
+            $result = $data;
+            return json_encode($result, JSON_PRETTY_PRINT);
         } else {
             return '';
         }

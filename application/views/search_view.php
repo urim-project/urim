@@ -37,6 +37,9 @@
         <script type="text/javascript" src="../js/DataTables-1.9.4/media/js/jquery.dataTables.min.js"></script>
         <link type="text/css" media="screen" rel="stylesheet" href="../js/DataTables-1.9.4/media/css/jquery.dataTables.css" />
 
+        <link rel="stylesheet" href="../js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+        <script src="../js/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
         <link rel="stylesheet" href="../js/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
         <script type="text/javascript" src="../js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4"></script>
 

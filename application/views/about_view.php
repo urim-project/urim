@@ -318,7 +318,7 @@
               <p>不是只有神學院學生、傳道、牧師才需要研讀聖經原文，您也可以！</p>
 
               <h4>自由、免費</h4>
-              <p>免費使用，自由閱讀，經文與字典使用公有領域資料，資料來源：<a href="https://github.com/bibleforge/BibleForgeDB">BibleForgeDB</a>、<a href="http://bible.fhl.net/public/">信望愛公開資料</a></p>
+              <p>完全免費！自由閱讀經文與字典，使用公有領域資料，資料來源：<a href="https://github.com/bibleforge/BibleForgeDB">BibleForgeDB</a>、<a href="http://bible.fhl.net/public/">信望愛公開資料</a></p>
 
               <h4>跨平台</h4>
               <p>支援 Safari、<a href="http://moztw.org/firefox">Firefox</a>、<a href="http://www.google.com/intl/zh-TW/chrome">Chrome</a> 等先進網頁瀏覽器。</p>
@@ -356,8 +356,7 @@
             </div>
           </div>
 
-          <h3>致謝</h3>
-          <p class="clearfix">感謝 歐陽毅 &lt;wishnoblog@gmail.com&gt; 協助轉換聖經資料格式！</p>
+
 
           <hr>
 

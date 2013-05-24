@@ -160,41 +160,41 @@ function getParameterByName(name) {
 
 $(function() {
 
-    if (jQuery.browser.mobile) {
-        $('code a').click(function(e) {
-            e.preventDefault();
-            var showmsg = noty({
-                text: $(this).attr('title'),
-                type: 'warning',
-                layout: 'bottom',
-                timeout: 1500,
-                modal: true
-            });
-        });
-    } else {
-        $('code a').tooltip({
-            'placement': 'left'
-        }).click(function(e) {
-            e.preventDefault();
+	if (jQuery.browser.mobile) {
+		$('code a').click(function(e) {
+			e.preventDefault();
+			var showmsg = noty({
+				text: $(this).attr('title'),
+				type: 'warning',
+				layout: 'bottom',
+				timeout: 1500,
+				modal: true
+			});
+		});
+	} else {
+		$('code a').tooltip({
+			'placement': 'left'
+		}).click(function(e) {
+			e.preventDefault();
             $(this).tooltip('toggle');
-        });
-    }
+	    });
+	}
 
     if (!jQuery.browser.mobile && !isiPad) {
-        $('.the-message a').clickover({
-            html: true,
+    	$('.the-message a').clickover({
+    		html: true,
             placement: 'bottom',
-            content: function() {
-                var ref = $(this).attr('data-ref');
+    		content: function() {
+    			var ref = $(this).attr('data-ref');
                 var refid = '#pop-content-' + ref;
-                return $(refid).html();
-            },
+    			return $(refid).html();
+    		},
             onShown: function() {
                 var ref = this.options.ref;
                 var refid = '#pop-content-' + ref;
                 window.location = refid;
             },
-            template: '<div class="popover visible-desktop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    		template: '<div class="popover visible-desktop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
             //<h3 class="popover-title"></h3>
             //Need to have this click check since the tooltip will not close on mobile
         });
@@ -206,8 +206,8 @@ $(function() {
     });
 
     if (!jQuery.browser.mobile && !isiPad) {
-        $('#sidebar.nano').nanoScroller();
-    }
+		$('#sidebar.nano').nanoScroller();
+	}
 
     $('[rel="clickover"]').clickover({
         html: true,
