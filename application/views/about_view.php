@@ -21,6 +21,7 @@
         <script src="../js/jquery.nanoscroller.0.6.9/jquery.nanoscroller.min.js"></script>
 
         <script type="text/javascript" src="../js/noty/jquery.noty.js"></script>
+        <script type="text/javascript" src="../js/noty/layouts/topLeft.js"></script>
         <script type="text/javascript" src="../js/noty/layouts/bottom.js"></script>
         <script type="text/javascript" src="../js/noty/layouts/bottomCenter.js"></script>
         <!-- You can add more layouts if you want -->
