@@ -324,7 +324,7 @@
               <p>支援 Safari、<a href="http://moztw.org/firefox">Firefox</a>、<a href="http://www.google.com/intl/zh-TW/chrome">Chrome</a> 等先進網頁瀏覽器。</p>
 
               <h4>開放原始碼</h4>
-              <p>程式碼可在 <a href="https://github.com/lancetw/urim">GitHub</a> 自由取得。</p>
+              <p>程式碼可在 <a href="https://github.com/urim-project">GitHub</a> 自由取得。</p>
             </div>
 
             <div class="span6">
