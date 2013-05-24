@@ -323,7 +323,7 @@
               <p><a href="http://www.chinesebible.org.hk/onlinebible">http://www.chinesebible.org.hk/onlinebible</a></p>
 
               <h4>Complete Jewish Bible</h4>
-              <p><a href="http://www.biblestudytools.com/cjb/genesis/1-1.html">http://www.biblestudytools.com/cjb/genesis/1-1.html</a></p>
+              <p><a href="http://www.biblegateway.com/passage/?search=Genesis%201&version=CJB">http://www.biblegateway.com/passage/?search=Genesis%201&version=CJB</a></p>
 
               <h4>妥拉的智慧</h4>
               <p><a href="http://rock24sea.blogspot.tw">http://rock24sea.blogspot.tw</a></p>
