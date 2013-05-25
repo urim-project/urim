@@ -158,7 +158,30 @@ function getParameterByName(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+/* ref: http://www.shaftek.org/blog/2005/06/03/removing-vowels-from-hebrew-unicode-text/ */
+$backupVowels = '';
+function stripVowels(rawString)
+{
+    var newString = '';
+    for(j=0; j<rawString.length; j++) {
+        if(rawString.charCodeAt(j)<1425
+             || rawString.charCodeAt(j)>1479)
+        { newString = newString + rawString.charAt(j); }
+    }
+    return(newString);
+}
+
 $(function() {
+
+    $('.book-title small').toggle(function() {
+        $str = $('.the-message a').html();
+        $backupVowels = $str;
+        $noVowels = stripVowels($str);
+        $('.the-message a').html($noVowels);
+
+    }, function() {
+        $('.the-message a').html($backupVowels);
+    });
 
     if (jQuery.browser.mobile) {
         $('code a').click(function(e) {
