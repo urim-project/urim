@@ -141,6 +141,12 @@ if ( $.fn.DataTable.TableTools ) {
     } );
 }
 
+/* 隱藏網址列 */
+window.onload = function(){
+    setTimeout(function(){
+        window.scrollTo(0, 1);
+    }, 100);
+}
 
 function fm_optimizeInput(){
     $("input[placeholder],textarea[placeholder]").each(function(){
@@ -172,6 +178,18 @@ function stripVowels(rawString)
 }
 
 $(function() {
+
+    /* 避免連結開新頁 */
+    if (("standalone" in window.navigator) && window.navigator.standalone) {
+        // For iOS Apps
+        $('a').on('click', function(e){
+            e.preventDefault();
+            var new_location = $(this).attr('href');
+            if (new_location != undefined && new_location.substr(0, 1) != '#' && $(this).attr('data-method') == undefined){
+              window.location = new_location;
+            }
+        });
+    }
 
     $('.book-title small').toggle(function() {
         $('.the-message a').each(function(i) {
@@ -207,7 +225,7 @@ $(function() {
 	    });
 	}
 
-    if (!jQuery.browser.mobile && !isiPad) {
+    if (!jQuery.browser.mobile) {
     	$('.the-message a').clickover({
     		html: true,
             placement: 'bottom',
@@ -220,8 +238,10 @@ $(function() {
                 var ref = this.options.ref;
                 var refid = '#pop-content-' + ref;
                 window.location = refid;
+
+                $('body').scrollTop(0);
             },
-    		template: '<div class="popover visible-desktop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    		template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
             //<h3 class="popover-title"></h3>
             //Need to have this click check since the tooltip will not close on mobile
         });
@@ -246,7 +266,7 @@ $(function() {
         },
     });
 
-    $('[rel="fhl-note"]').live('click', function(e) {
+    $('body').on('click', '[rel="fhl-note"]', function(e) {
         var fhl_note_id = $(this).attr('data-ref');
         var type = '';
         if ( fhl_note_id.charAt(0) == 'H' ) {
@@ -312,8 +332,9 @@ $(function() {
         "sDom": "<'row'<'span9'f>'row'<'span12'p>r>t<'row'<'span8'i><'span4'l>>",
         "sPaginationType": "bootstrap",
         "oLanguage": {
+            "sProcessing": "資料載入中，請耐心等待",
             "sLengthMenu": "每頁顯示 _MENU_ 筆資料",
-            "sZeroRecords": "甚麼都找不到 >_<",
+            "sZeroRecords": "",
             "sInfo": "顯示 _START_ 到 _END_ 共 _TOTAL_ 筆資料",
             "sInfoEmpty": "顯示 0 到 0 筆、共 0 筆資料",
             "sInfoFiltered": "(從 _MAX_ 筆資料中過濾)",
@@ -371,3 +392,4 @@ $(window).load(function() {
         })
     });
 });
+

@@ -12,6 +12,16 @@ body {
     max-width: 700px;
 }
 
+h1.book-title small {
+    cursor: help;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .resources-header {
     margin: 60px 0;
     text-align: center;
@@ -708,7 +718,7 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        margin-top: 45px;
+        margin-top: 80px;
         margin-bottom: 65px;
     }
 
@@ -737,7 +747,7 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        margin-top: 10px;
+        margin-top: 45px;
         margin-bottom: 25px;
     }
 
@@ -781,7 +791,7 @@ table.dataTable th:active {
     }
 
     .mmenu-page {
-        margin-top: 0;
+        margin-top: 35px;
     }
 
     .tab-pane {
@@ -795,8 +805,17 @@ table.dataTable th:active {
     }
 
     .the-message {
-        height: 104px;
+        height: auto;
         overflow: auto;
+    }
+
+    .navbar {
+        position: fixed;
+        padding-left: 0;
+    }
+
+    .sidebar-padding {
+        height: 550px;
     }
 }
 
@@ -807,13 +826,12 @@ table.dataTable th:active {
     }
 
     .mmenu-opened > ul {
-        margin-top: 45px;
+        margin-top: 35px;
     }
 
     .mmenu-page {
-        margin-top: 0;
+        margin-top: -30px;
     }
-
 
     .tab-pane {
         overflow: auto;

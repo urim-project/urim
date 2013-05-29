@@ -46,7 +46,7 @@ class Reading extends CI_Controller {
 			'cunp' => $this->bible->translation_by_serial_version($_serial, 'cunp'),
 		);
 
-		$data['lexicon'] = $this->bible->make_lexicon($words_array, $type);
+		$data['lexicon'] = $this->bible->make_lexicon($words_array, $_serial, $type);
 
 		$data['layout']['next'] = implode('.', $this->bible->next_serial($_serial));
 		$data['layout']['prev'] = implode('.', $this->bible->prev_serial($_serial));

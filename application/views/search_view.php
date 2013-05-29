@@ -1,13 +1,17 @@
 <!DOCTYPE html>
     <html lang="zh-hant">
     <head>
-        <title>URIM</title>
+        <title>URIM 聖經研讀工具集 | 搜尋</title>
         <meta name="author" content="Hsin-lin Cheng aka lancetw, lancetw@gmail.com, 2013 Summer">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <link rel="apple-touch-icon" href="icon.png"/>
+        <? if ($static == true) : ?>
+        <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-touch-icon-144x144.png">
+        <? else: ?>
+        <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url('img/apple-touch-icon-144x144.png'); ?>">
+        <? endif; ?>
 
         <? if ($static == true) : ?>
         <link href="../css/bootstrap/css/bootstrap.min.css" rel="stylesheet">

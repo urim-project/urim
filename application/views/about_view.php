@@ -1,13 +1,18 @@
 <!DOCTYPE html>
     <html lang="zh-hant">
     <head>
-        <title>URIM</title>
+        <title>URIM 聖經研讀工具集</title>
         <meta name="author" content="Hsin-lin Cheng aka lancetw, lancetw@gmail.com, 2013 Summer">
         <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="viewport" content="initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <link rel="apple-touch-icon" href="icon.png"/>
+        <? if ($static == true) : ?>
+        <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-touch-icon-144x144.png">
+        <? else: ?>
+        <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url('img/apple-touch-icon-144x144.png'); ?>">
+        <? endif; ?>
 
         <? if ($static == true) : ?>
         <link href="../css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,11 +54,11 @@
 
         <? else: ?>
 
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link href="<?= base_url('css/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
 
         <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="<?= base_url('css/bootstrap/js/bootstrap.min.js'); ?>"></script>
 
         <link href="<?= base_url('js/jquery.nanoscroller.0.6.9/nanoscroller.css'); ?>" rel="stylesheet">
         <script src="<?= base_url('js/jquery.nanoscroller.0.6.9/jquery.nanoscroller.min.js'); ?>"></script>
@@ -68,7 +73,7 @@
         <script type="text/javascript" src="<?= base_url('js/ios-orientationchange-fix.js'); ?>"></script>
         <script type="text/javascript" src="<?= base_url('js/bootstrapx-clickover.js'); ?>"></script>
 
-        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<?= base_url('css/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet">
 
         <script type="text/javascript" src="<?= base_url('js/mmenu-1.2.3/jquery.mmenu.js'); ?>"></script>
         <link type="text/css" media="screen" rel="stylesheet" href="<?= base_url('js/mmenu-1.2.3/mmenu.css'); ?>" />
@@ -337,6 +342,10 @@
                 </div>
             </div>
           </div>
+
+          <hr>
+
+          <div class="alert alert-info">請注意，本服務提供的新約希臘文只是某個抄本，並未經過 <a href="http://www.chioulaoshi.org/EXG/textual.html">新約經文鑑別學 (Textual Criticism)</a> 的處理，希望未來能提供此類資訊。</div>
 
           <hr>
 
